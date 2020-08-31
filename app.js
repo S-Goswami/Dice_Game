@@ -14,6 +14,9 @@ function initializeNewGame () {
   document.querySelector(".player-area-1").classList.remove('active');
   document.querySelector('.btn-roll-dice').disabled = false;
   winner ? document.querySelector(winner).querySelector('.winner-label').classList.remove('win') : null;
+  document.querySelectorAll('.winner-label').forEach(function (x){
+    x.style.visibility = 'hidden';
+    })
 }
 
 initializeNewGame();
